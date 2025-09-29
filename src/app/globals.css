@@ -1,0 +1,539 @@
+@import "tailwindcss";
+
+:root {
+  /* Balanced Ayurvedic Color Palette with Proper Contrast */
+  --background: #fafff7;
+  --background-gradient: linear-gradient(135deg, #fafff7 0%, #f1f8e9 25%, #e8f5e8 50%, #dcedc8 75%, #c8e6c9 100%);
+  --foreground: #1b2e1f;
+  --muted-foreground: #4a5d4e;
+  
+  /* Forest Green - Primary (Dark for contrast) */
+  --forest: #1b5e20;
+  --forest-dark: #0d3f11;
+  --forest-light: #2e7d32;
+  --forest-foreground: #ffffff;
+  
+  /* Sage Green - Secondary (Medium tone) */
+  --sage: #558b2f;
+  --sage-dark: #33691e;
+  --sage-light: #689f38;
+  --sage-foreground: #ffffff;
+  
+  /* Neem Green - Healing (Fresh bright green) */
+  --neem: #4caf50;
+  --neem-dark: #388e3c;
+  --neem-light: #66bb6a;
+  --neem-foreground: #ffffff;
+  
+  /* Mint Green - Fresh (Light for backgrounds) */
+  --mint: #a5d6a7;
+  --mint-dark: #81c784;
+  --mint-light: #c8e6c9;
+  --mint-foreground: #1b5e20;
+  
+  /* Olive Green - Wisdom (Muted natural) */
+  --olive: #827717;
+  --olive-dark: #689f38;
+  --olive-light: #9e9d24;
+  --olive-foreground: #ffffff;
+  
+  /* Jade Green - Prosperity (Deep teal-green) */
+  --jade: #00695c;
+  --jade-dark: #004d40;
+  --jade-light: #00796b;
+  --jade-foreground: #ffffff;
+  
+  /* Bamboo Green - Growth (Yellow-green) */
+  --bamboo: #689f38;
+  --bamboo-dark: #558b2f;
+  --bamboo-light: #8bc34a;
+  --bamboo-foreground: #ffffff;
+  
+  /* Sacred Gold - Accent (Warm complement) */
+  --gold: #ff8f00;
+  --gold-dark: #ef6c00;
+  --gold-light: #ffa726;
+  --gold-foreground: #ffffff;
+  
+  /* Cream - Light Background */
+  --cream: #fafff7;
+  --cream-dark: #f1f8e9;
+  --cream-light: #ffffff;
+  --cream-foreground: #1b2e1f;
+  
+  /* Traditional Background Variations with Better Contrast */
+  --muted: #f1f8e9;
+  --card: #ffffff;
+  --card-foreground: #1b2e1f;
+  --border: #c8e6c9;
+  --input: #f1f8e9;
+  --ring: #1b5e20;
+  
+  /* Primary and Secondary for Tailwind - Non-green to avoid conflicts */
+  --primary: #4f46e5;        /* Indigo - distinct from green background */
+  --primary-foreground: #ffffff;
+  --secondary: #7c3aed;      /* Purple - complements the theme */
+  --secondary-foreground: #ffffff;
+  --accent: #f59e0b;         /* Amber - warm accent */
+  --accent-foreground: #1f2937;
+  
+  /* Balanced Dosha Colors with Good Contrast */
+  --vata: #81c784;      /* Air & Space - Light mint */
+  --vata-light: #c8e6c9;
+  --pitta: #ff8f00;     /* Fire & Water - Gold */
+  --pitta-light: #ffcc80;
+  --kapha: #1b5e20;     /* Earth & Water - Deep forest */
+  --kapha-light: #2e7d32;
+  
+  /* Six Tastes (Rasa) - Properly Differentiated */
+  --madhura: #a5d6a7;   /* Sweet - Light mint */
+  --amla: #66bb6a;      /* Sour - Medium green */
+  --lavana: #4caf50;    /* Salty - Bright neem */
+  --katu: #ff8f00;      /* Pungent - Sacred gold */
+  --tikta: #1b5e20;     /* Bitter - Deep forest */
+  --kashaya: #00695c;   /* Astringent - Jade green */
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  
+  body {
+    background: var(--background-gradient);
+    color: var(--foreground);
+    font-family: "Inter", system-ui, sans-serif;
+    min-height: 100vh;
+    background-attachment: fixed;
+  }
+  
+  /* Traditional Green-Dominant Patterns */
+  .bg-ayurveda-mandala {
+    background: linear-gradient(135deg, 
+      #f8fffe 0%, 
+      #e8f5e8 25%, 
+      #f0f9f0 50%, 
+      #e0f2e0 75%, 
+      #f5fdf5 100%
+    );
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(46, 125, 50, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(76, 175, 80, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, rgba(129, 199, 132, 0.02) 0%, transparent 70%);
+    background-size: 120px 120px, 80px 80px, 200px 200px;
+    background-position: 0 0, 40px 40px, 60px 60px;
+  }
+
+  .bg-ayurveda-lotus {
+    background-image: 
+      radial-gradient(circle, rgba(129, 199, 132, 0.12) 2px, transparent 2px),
+      radial-gradient(circle, rgba(104, 159, 56, 0.08) 1px, transparent 1px);
+    background-size: 40px 40px, 80px 80px;
+    background-position: 0 0, 20px 20px;
+  }
+
+  .bg-ayurveda-leaf {
+    background-image: 
+      linear-gradient(45deg, rgba(129, 199, 132, 0.1) 25%, transparent 25%),
+      linear-gradient(-45deg, rgba(104, 159, 56, 0.1) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, rgba(129, 199, 132, 0.1) 75%),
+      linear-gradient(-45deg, transparent 75%, rgba(104, 159, 56, 0.1) 75%);
+    background-size: 60px 60px;
+    background-position: 0 0, 0 30px, 30px -30px, -30px 0px;
+  }
+}
+
+/* High Contrast Card Styles - White Backgrounds with Colored Accents */
+.ayurveda-card-vata {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-left: 4px solid #81c784;
+  color: var(--foreground);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ayurveda-card-pitta {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-left: 4px solid #ff8f00;
+  color: var(--foreground);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ayurveda-card-kapha {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-left: 4px solid #1b5e20;
+  color: var(--foreground);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ayurveda-card-forest {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-left: 4px solid #2e7d32;
+  color: var(--foreground);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ayurveda-card-mint {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-left: 4px solid #66bb6a;
+  color: var(--foreground);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ayurveda-card-jade {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-left: 4px solid #00796b;
+  color: var(--foreground);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ayurveda-card-bamboo {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-left: 4px solid #8bc34a;
+  color: var(--foreground);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Improved Text Colors with High Contrast */
+.text-ayurveda-forest { color: var(--forest); }
+.text-ayurveda-sage { color: var(--sage); }
+.text-ayurveda-neem { color: var(--neem); }
+.text-ayurveda-mint { color: var(--mint-dark); }
+.text-ayurveda-jade { color: var(--jade); }
+.text-ayurveda-bamboo { color: var(--bamboo); }
+.text-ayurveda-gold { color: var(--gold); }
+.text-ayurveda-olive { color: var(--olive); }
+
+/* Hero section specific text colors */
+.text-hero-primary { color: #ffffff; }
+.text-hero-secondary { color: rgba(255, 255, 255, 0.9); }
+.text-hero-accent { color: var(--gold); }
+
+/* Enhanced Hover Effects with Better Visual Feedback */
+.ayurveda-hover {
+  transition: all 0.3s ease;
+}
+
+.ayurveda-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+/* Improved Navigation Styles */
+.ayurveda-nav {
+  background: linear-gradient(90deg, 
+    rgba(27, 94, 32, 0.95) 0%, 
+    rgba(46, 125, 50, 0.95) 50%, 
+    rgba(0, 105, 92, 0.95) 100%);
+  backdrop-filter: blur(12px);
+  border-bottom: 3px solid var(--forest-dark);
+  box-shadow: 0 4px 20px rgba(27, 94, 32, 0.3);
+}
+
+/* Improved Button Styles with Better Contrast */
+.btn-ayurveda-primary {
+  background: linear-gradient(135deg, var(--forest) 0%, var(--sage) 100%);
+  color: var(--forest-foreground);
+  border: 2px solid var(--forest-dark);
+  box-shadow: 0 4px 16px rgba(27, 94, 32, 0.3);
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.btn-ayurveda-primary:hover {
+  background: linear-gradient(135deg, var(--forest-dark) 0%, var(--forest) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(27, 94, 32, 0.4);
+}
+
+.btn-ayurveda-secondary {
+  background: linear-gradient(135deg, var(--neem) 0%, var(--mint-dark) 100%);
+  color: var(--neem-foreground);
+  border: 2px solid var(--neem-dark);
+  box-shadow: 0 4px 16px rgba(76, 175, 80, 0.3);
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.btn-ayurveda-secondary:hover {
+  background: linear-gradient(135deg, var(--neem-dark) 0%, var(--neem) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(76, 175, 80, 0.4);
+}
+
+/* Accent Button */
+.btn-ayurveda-accent {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  color: var(--gold-foreground);
+  border: 2px solid var(--gold-dark);
+  box-shadow: 0 4px 16px rgba(255, 143, 0, 0.3);
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.btn-ayurveda-accent:hover {
+  background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 143, 0, 0.4);
+}
+
+/* Enhanced Chart Colors */
+.chart-vata { fill: var(--mint); }
+.chart-pitta { fill: var(--gold); }
+.chart-kapha { fill: var(--forest); }
+
+/* Green-Enhanced Chart Colors */
+.chart-vata { fill: var(--mint); }
+.chart-pitta { fill: var(--sage); }
+.chart-kapha { fill: var(--forest); }
+
+/* Sacred Green Geometry Borders */
+.ayurveda-border {
+  border-image: linear-gradient(45deg, 
+    var(--forest), 
+    var(--jade), 
+    var(--sage)) 1;
+}
+
+/* Better Background Sections with Visual Hierarchy */
+.ayurveda-calm {
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.95) 0%, 
+    rgba(241, 248, 233, 0.95) 50%,
+    rgba(232, 245, 232, 0.95) 100%);
+}
+
+/* Hero section with proper contrast */
+.ayurveda-energy {
+  background: linear-gradient(135deg, 
+    rgba(27, 94, 32, 0.9) 0%, 
+    rgba(46, 125, 50, 0.9) 100%);
+}
+
+/* Healing section with light background */
+.ayurveda-healing {
+  background: linear-gradient(135deg, 
+    rgba(241, 248, 233, 0.8) 0%, 
+    rgba(232, 245, 232, 0.8) 100%);
+}
+
+/* Traditional Green Animations */
+@keyframes ayurveda-pulse {
+  0%, 100% { 
+    box-shadow: 0 0 0 0 rgba(46, 125, 50, 0.4); 
+  }
+  50% { 
+    box-shadow: 0 0 0 20px rgba(46, 125, 50, 0); 
+  }
+}
+
+.ayurveda-pulse {
+  animation: ayurveda-pulse 2s infinite;
+}
+
+/* Improved Typography with Clear Hierarchy */
+.ayurveda-heading {
+  font-family: "Playfair Display", serif;
+  color: var(--forest);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.ayurveda-subheading {
+  color: var(--sage);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+/* Hero specific typography */
+.hero-heading {
+  font-family: "Playfair Display", serif;
+  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero-accent {
+  color: var(--gold);
+  text-shadow: 0 2px 8px rgba(255, 143, 0, 0.5);
+}
+
+.hero-subtext {
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Dark mode adjustments for Green Ayurveda theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1b5e20;
+    --background-gradient: linear-gradient(135deg, #1b5e20 0%, #2e7d32 25%, #388e3c 50%, #4caf50 75%, #66bb6a 100%);
+    --foreground: #e8f5e8;
+    --muted-foreground: #81c784;
+    --muted: #2e7d32;
+    --border: #388e3c;
+    --card: #2e7d32;
+    --card-foreground: #e8f5e8;
+  }
+  
+  /* Dark mode Green Ayurvedic patterns */
+  .bg-ayurveda-mandala {
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(46, 125, 50, 0.12) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, rgba(129, 199, 132, 0.12) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, rgba(76, 175, 80, 0.08) 0%, transparent 70%);
+  }
+}
+
+/* Additional Green Ayurvedic utility classes */
+.ayurveda-transition {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ayurveda-shadow-sm {
+  box-shadow: 0 4px 8px rgba(46, 125, 50, 0.15);
+}
+
+.ayurveda-shadow-lg {
+  box-shadow: 0 12px 24px rgba(46, 125, 50, 0.25);
+}
+
+.ayurveda-rounded {
+  border-radius: 12px;
+}
+
+/* Additional Green Background Classes */
+.bg-ayurveda-forest { background-color: var(--forest); }
+.bg-ayurveda-sage { background-color: var(--sage); }
+.bg-ayurveda-neem { background-color: var(--neem); }
+.bg-ayurveda-mint { background-color: var(--mint); }
+.bg-ayurveda-jade { background-color: var(--jade); }
+.bg-ayurveda-bamboo { background-color: var(--bamboo); }
+.bg-ayurveda-gold { background-color: var(--gold); }
+
+/* High Contrast Text Colors for Green Backgrounds */
+.text-ayurveda-contrast-light { color: #ffffff; }
+.text-ayurveda-contrast-dark { color: #1b5e20; }
+.text-ayurveda-contrast-gold { color: var(--gold); }
+
+/* Traditional spacing using sacred proportions */
+.ayurveda-space-sm { margin: 8px; }
+.ayurveda-space-md { margin: 21px; }
+.ayurveda-space-lg { margin: 34px; }
+.ayurveda-space-xl { margin: 55px; }
+
+/* Force dark text for inputs - highest priority */
+.force-dark-text {
+  color: #1f2937 !important;
+  -webkit-text-fill-color: #1f2937 !important;
+}
+
+.force-dark-text input {
+  color: #1f2937 !important;
+  -webkit-text-fill-color: #1f2937 !important;
+}
+
+.force-dark-text::placeholder {
+  color: #6b7280 !important;
+}
+
+input.force-dark-text {
+  color: #1f2937 !important;
+  -webkit-text-fill-color: #1f2937 !important;
+}
+
+input.force-dark-text:focus {
+  color: #1f2937 !important;
+  -webkit-text-fill-color: #1f2937 !important;
+}
+
+/* Additional aggressive overrides for all inputs */
+input[type="text"], 
+input[type="email"], 
+input[type="tel"], 
+input[type="password"], 
+input[type="date"], 
+input[type="number"],
+select,
+textarea {
+  color: #1f2937 !important;
+  -webkit-text-fill-color: #1f2937 !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #6b7280 !important;
+}
+
+/* Override any inherited CSS variables */
+* {
+  --tw-text-opacity: 1 !important;
+}
+
+/* Force dark text on any input within the signup form */
+form input,
+form select,
+form textarea {
+  color: #1f2937 !important;
+  -webkit-text-fill-color: #1f2937 !important;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #6b7280 !important;
+}
+
+/* Ensure all form elements have dark text */
+.auth-form * {
+  color: #1f2937 !important;
+}
+
+.auth-form input,
+.auth-form textarea,
+.auth-form select {
+  color: #1f2937 !important;
+  -webkit-text-fill-color: #1f2937 !important;
+}
+
+.auth-form input::placeholder,
+.auth-form textarea::placeholder {
+  color: #6b7280 !important;
+}
+
+/* Nuclear option - force ALL text on auth pages to be dark */
+[class*="auth"] *,
+form *,
+.card * {
+  color: #1f2937 !important;
+}
+
+/* Specific overrides for form elements */
+[class*="auth"] input,
+[class*="auth"] textarea,
+[class*="auth"] select,
+form input,
+form textarea,
+form select {
+  color: #1f2937 !important;
+  -webkit-text-fill-color: #1f2937 !important;
+}
+
+[class*="auth"] input::placeholder,
+[class*="auth"] textarea::placeholder,
+form input::placeholder,
+form textarea::placeholder {
+  color: #6b7280 !important;
+  opacity: 1 !important;
+}
+
+/* Ensure buttons maintain their styling */
+button {
+  color: inherit !important;
+}
